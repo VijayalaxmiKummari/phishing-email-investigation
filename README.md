@@ -9,7 +9,7 @@ A hands-on SOC analyst project: take one suspicious email, work out whether it i
 | **Skills shown** | Email header analysis, SPF / DKIM / DMARC, IOC extraction, defanging, MITRE ATT&CK mapping, incident reporting, Python |
 | **Tools** | Python 3 (standard library only), a text editor, the terminal |
 | **Time to complete** | About 60 to 90 minutes for a beginner |
-| **Safe to run?** | Yes. The email is a training sample I wrote. Every domain ends in `.example` and every IP is from a documentation range, so none of them exist on the internet. |
+| **Safe to run?** | Yes. The email is a training sample created for this project. Every domain ends in `.example` and every IP is from a documentation range, so none of them exist on the internet. |
 
 ## What this project does
 
