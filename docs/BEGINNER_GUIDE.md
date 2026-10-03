@@ -74,11 +74,11 @@ On a Mac, if Git is missing a pop-up offers to install the "command line develop
 
 ```bash
 cd ~/Documents
-git clone https://github.com/YOUR-USERNAME/phishing-email-investigation.git
+git clone https://github.com/VijayalaxmiKummari/phishing-email-investigation.git
 cd phishing-email-investigation
 ```
 
-`cd` means "change directory", which moves you into a folder. Replace `YOUR-USERNAME` with your GitHub username.
+`cd` means "change directory", which moves you into a folder. Replace `VijayalaxmiKummari` with your GitHub username.
 
 ### 3.5 Look around
 
