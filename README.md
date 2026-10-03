@@ -40,6 +40,11 @@ VERDICT: MALICIOUS
 | 7 | First hop is `WIN-7K2PQ1`, sent with PHPMailer | Sent from a personal Windows machine using a mailing script, not a company mail server |
 
 The full write-up is in [`reports/investigation_report.md`](reports/investigation_report.md).
+## Screenshots
+<img width="1084" height="350" alt="phishing invetsigation" src="https://github.com/user-attachments/assets/343d541c-d689-4498-b38c-3499c42330dd" />
+
+
+<img width="913" height="383" alt="physinh inversigation2" src="https://github.com/user-attachments/assets/32d80550-963e-401d-b256-6560287e449c" />
 
 ## Project layout
 
