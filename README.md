@@ -62,7 +62,7 @@ phishing-email-investigation/
 You need Python 3.8 or newer. Nothing else has to be installed.
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/phishing-email-investigation.git
+git clone https://github.com/VijayalaxmiKummari/phishing-email-investigation.git
 cd phishing-email-investigation
 python3 analyzer/phish_analyzer.py samples/invoice_overdue.eml --trusted-domain company.example
 ```
