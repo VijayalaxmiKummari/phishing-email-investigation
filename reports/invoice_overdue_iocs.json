@@ -1,0 +1,132 @@
+{
+  "file": "samples/invoice_overdue.eml",
+  "email_sha256": "8ba6d9a78e393ee1d924389fb17ae8f17e251f6256723d1df0392b5d2a74ad74",
+  "headers": {
+    "from_name": "IT Support",
+    "from_address": "it@c0mpany-help.example",
+    "reply_to": "pay@mail-drop.example",
+    "return_path": "bounce@mail-drop.example",
+    "to": [
+      "alex.morgan@company.example"
+    ],
+    "subject": "URGENT: Invoice overdue - account will be suspended today",
+    "date": "Mon, 28 Sep 2026 08:14:02 +0000",
+    "message_id": "<20260928081402.19fc@WIN-7K2PQ1>",
+    "x_mailer": "PHPMailer 5.2.9"
+  },
+  "authentication": {
+    "spf": "fail",
+    "dkim": "none",
+    "dmarc": "fail"
+  },
+  "hops": [
+    {
+      "from": "WIN-7K2PQ1",
+      "by": "relay7.mail-drop.example",
+      "ip": "203.0.113.45"
+    },
+    {
+      "from": "relay7.mail-drop.example",
+      "by": "mx.company.example",
+      "ip": "198.51.100.77"
+    },
+    {
+      "from": "mx.company.example",
+      "by": "inbox.company.example",
+      "ip": "192.0.2.25"
+    }
+  ],
+  "origin_ip": "203.0.113.45",
+  "urls": [
+    "https://login-portal.example/verify?id=8841&user=alex.morgan"
+  ],
+  "attachments": [
+    {
+      "filename": "Invoice_8841.pdf.html",
+      "content_type": "text/html",
+      "size_bytes": 96,
+      "sha256": "49644c131e7273bb7fa7d950b16155b1a3270c891e18f9b0ad4959d850402ded"
+    }
+  ],
+  "findings": [
+    {
+      "id": "reply_to_mismatch",
+      "points": 15,
+      "detail": "Replies go to pay@mail-drop.example, a different domain from the sender (c0mpany-help.example)."
+    },
+    {
+      "id": "return_path_mismatch",
+      "points": 10,
+      "detail": "Return-Path is bounce@mail-drop.example, a different domain from the sender (c0mpany-help.example)."
+    },
+    {
+      "id": "lookalike_domain",
+      "points": 20,
+      "detail": "Sender domain c0mpany-help.example imitates company.example but is not the same domain."
+    },
+    {
+      "id": "spf_fail",
+      "points": 20,
+      "detail": "SPF result is 'fail': the sending server is not allowed to send for this domain."
+    },
+    {
+      "id": "dkim_fail",
+      "points": 10,
+      "detail": "DKIM result is 'none': the message has no valid digital signature."
+    },
+    {
+      "id": "dmarc_fail",
+      "points": 20,
+      "detail": "DMARC result is 'fail': the From address is not backed by SPF or DKIM."
+    },
+    {
+      "id": "risky_attachment",
+      "points": 15,
+      "detail": "Attachment 'Invoice_8841.pdf.html' is a risky file type (.html)."
+    },
+    {
+      "id": "double_extension",
+      "points": 10,
+      "detail": "Attachment 'Invoice_8841.pdf.html' has two extensions, a trick to disguise the real file type."
+    },
+    {
+      "id": "link_mismatch",
+      "points": 20,
+      "detail": "Link shows portal[.]company[.]example but really goes to login-portal[.]example."
+    },
+    {
+      "id": "urgency",
+      "points": 10,
+      "detail": "Pressure language used: urgent, immediately, suspended, overdue, verify your password, within 24 hours, act now, loss of access, do not ignore."
+    },
+    {
+      "id": "generic_greeting",
+      "points": 5,
+      "detail": "Generic greeting instead of the recipient's name."
+    }
+  ],
+  "score": 100,
+  "verdict": "MALICIOUS",
+  "iocs": {
+    "domains": [
+      "c0mpany-help[.]example",
+      "login-portal[.]example",
+      "mail-drop[.]example"
+    ],
+    "urls": [
+      "hxxps://login-portal[.]example/verify?id=8841&user=alex[.]morgan"
+    ],
+    "ips": [
+      "203[.]0[.]113[.]45",
+      "198[.]51[.]100[.]77"
+    ],
+    "email_addresses": [
+      "bounce@mail-drop[.]example",
+      "it@c0mpany-help[.]example",
+      "pay@mail-drop[.]example"
+    ],
+    "file_hashes_sha256": [
+      "49644c131e7273bb7fa7d950b16155b1a3270c891e18f9b0ad4959d850402ded"
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+Return-Path: <bounce@mail-drop.example>
+Received: from mx.company.example (mx.company.example [192.0.2.25]) by
+ inbox.company.example with ESMTPS id 4Xk9; Mon, 28 Sep 2026 09:14:09 +0100
+Received: from relay7.mail-drop.example (relay7.mail-drop.example
+ [198.51.100.77]) by mx.company.example with ESMTP id 77aa; Mon, 28 Sep 2026
+ 09:14:07 +0100
+Received: from WIN-7K2PQ1 (unknown [203.0.113.45]) by relay7.mail-drop.example
+ with ESMTPA id 19fc; Mon, 28 Sep 2026 08:14:02 +0000
+Authentication-Results: mx.company.example; spf=fail (sender IP is
+ 198.51.100.77) smtp.mailfrom=mail-drop.example; dkim=none; dmarc=fail
+ action=none header.from=c0mpany-help.example
+From: "IT Support" <it@c0mpany-help.example>
+Reply-To: pay@mail-drop.example
+To: alex.morgan@company.example
+Subject: URGENT: Invoice overdue - account will be suspended today
+Date: Mon, 28 Sep 2026 08:14:02 +0000
+Message-ID: <20260928081402.19fc@WIN-7K2PQ1>
+X-Mailer: PHPMailer 5.2.9
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============3626779398343796514=="
+
+--===============3626779398343796514==
+Content-Type: multipart/alternative;
+ boundary="===============8704072992738359873=="
+
+--===============8704072992738359873==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Dear user,
+
+Our records show invoice #8841 is overdue. Your account will be suspended
+within 24 hours unless you verify your password immediately.
+
+Sign in here to confirm your details:
+https://login-portal.example/verify?id=8841&user=alex.morgan
+
+Do not ignore this message. Failure to act now will result in loss of access.
+
+IT Support
+
+--===============8704072992738359873==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+<html><body style="font-family:Arial">
+<p>Dear user,</p>
+<p>Our records show invoice <b>#8841</b> is overdue. Your account will be
+<b>suspended within 24 hours</b> unless you verify your password immediately.</p>
+<p><a href="https://login-portal.example/verify?id=8841&amp;user=alex.morgan">https://portal.company.example/billing</a></p>
+<p>Do not ignore this message. Failure to act now will result in loss of access.</p>
+<p>IT Support</p>
+</body></html>
+
+--===============8704072992738359873==--
+
+--===============3626779398343796514==
+Content-Type: text/html
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Invoice_8841.pdf.html"
+MIME-Version: 1.0
+
+PGh0bWw+PGJvZHk+PCEtLSBoYXJtbGVzcyB0cmFpbmluZyBmaWxlOiBubyByZWFsIGNvbnRlbnQg
+LS0+PGgxPkludm9pY2UgODg0MTwvaDE+PC9ib2R5PjwvaHRtbD4K
+
+--===============3626779398343796514==--
